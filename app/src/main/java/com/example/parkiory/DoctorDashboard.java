@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+import com.example.parkiory.HomeAdapter.FeaturedAdapter;
 import com.example.parkiory.HomeAdapter.FeaturedHelperClass;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 public class DoctorDashboard extends AppCompatActivity {
 
     RecyclerView featuredRecycler;
+    RecyclerView.Adapter adapter;
 
 
     @Override
@@ -42,5 +44,7 @@ public class DoctorDashboard extends AppCompatActivity {
         featuredLocations.add(new FeaturedHelperClass(R.drawable.ishika,"YUVRAJ SINGH DEORA","Need a little more observation.Suffering with parkinson but no sign of Alzheimer"));
         featuredLocations.add(new FeaturedHelperClass(R.drawable.aaditry,"YUVRAJ SINGH DEORA","Need a little more observation.Suffering with parkinson but no sign of Alzheimer"));
 
+        adapter=new FeaturedAdapter(featuredLocations);
+        featuredRecycler.setAdapter(adapter);
     }
 }
