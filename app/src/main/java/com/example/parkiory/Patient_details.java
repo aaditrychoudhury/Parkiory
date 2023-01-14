@@ -3,17 +3,24 @@ package com.example.parkiory;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
 import com.google.firebase.database.DatabaseReference;
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,12 +43,10 @@ public class Patient_details extends AppCompatActivity {
         xaxiref=firebaseDatabase.getReference("xaxis");
         yaxisref=firebaseDatabase.getReference("yaxis");
         getdata();
-        int x=0,y=0;
-        // on below line we are adding data to our graph view.
+
         LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
                 // on below line we are adding
                 // each point on our x and y axis.
-
                 new DataPoint(0, 1),
                 new DataPoint(1, 3),
                 new DataPoint(2, 4),
@@ -50,7 +55,8 @@ public class Patient_details extends AppCompatActivity {
                 new DataPoint(5, 3),
                 new DataPoint(6, 6),
                 new DataPoint(7, 1),
-                new DataPoint(8, 2)
+                new DataPoint(8, 2),
+                new DataPoint(9, 0)
         });
 
         // after adding data to our line graph series.
@@ -70,6 +76,8 @@ public class Patient_details extends AppCompatActivity {
         // data series to our graph view.
         graphView.addSeries(series);
     }
+
+
 
     private void getdata() {
         xaxiref.addValueEventListener(new ValueEventListener() {
