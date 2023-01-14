@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.example.parkiory.HomeAdapter.FeaturedAdapter;
 import com.example.parkiory.HomeAdapter.FeaturedHelperClass;
@@ -30,7 +33,15 @@ public class DoctorDashboard extends AppCompatActivity {
         featuredRecycler = findViewById(R.id.featured_recycler);
 
         featuredRecycler();
-
+        TextView patient_view_onclick;
+        patient_view_onclick=findViewById(R.id.patient_detail_txt);
+        patient_view_onclick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),Patient_details.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void featuredRecycler(){
