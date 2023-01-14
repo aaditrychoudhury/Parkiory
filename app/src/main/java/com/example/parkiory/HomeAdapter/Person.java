@@ -2,7 +2,9 @@ package com.example.parkiory.HomeAdapter;
 
 public class Person {
     private String pname, description, comments, image, category, pid, date, time;
+    public Person(){
 
+    }
     public Person(String pname, String description, String comments, String image, String category, String pid, String date, String time) {
         this.pname = pname;
         this.description = description;
