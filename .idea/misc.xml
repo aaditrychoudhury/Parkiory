@@ -9,15 +9,17 @@
         <entry key="app/src/main/res/drawable/orange_light_banner.xml" value="0.126" />
         <entry key="app/src/main/res/drawable/search_background.xml" value="0.126" />
         <entry key="app/src/main/res/layout/activity_doctor_dashboard.xml" value="0.2346014492753623" />
+        <entry key="app/src/main/res/layout/activity_line_chart.xml" value="0.19429347826086957" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.23007246376811594" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19610507246376813" />
-        <entry key="app/src/main/res/layout/activity_patient_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_patient_details.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.20199275362318841" />
         <entry key="app/src/main/res/layout/activity_register_face.xml" value="0.21829710144927536" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_stored.xml" value="0.19429347826086957" />
         <entry key="app/src/main/res/layout/featured_card_design.xml" value="0.2346014492753623" />
-        <entry key="app/src/main/res/layout/person_detail_layout.xml" value="0.19429347826086957" />
+        <entry key="app/src/main/res/layout/main_sample.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/person_detail_layout.xml" value="0.22" />
       </map>
     </option>
   </component>
